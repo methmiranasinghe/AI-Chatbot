@@ -23,7 +23,7 @@ def wishMe():
         speak("Good Morning Sir!")
     else:
         speak("Welcome to Buddy Chatbot!")
-    speak("How May I help you,Methmi ?")
+    speak("How May I help you,Pasindu ?")
 
 
 def takeCommand():
