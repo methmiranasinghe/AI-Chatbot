@@ -5,9 +5,17 @@ import datetime
 import webbrowser
 import os
 import pyaudio
+import pyfiglet
+
+text = pyfiglet.figlet_format("Chat Buddy")
+print(text)
+
+print('Developed by Methmi Hasara & Pasindu Bandara')
+print('© 2022 All rights Reserved')
 
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
+
 
 engine.setProperty('voice', voices[0].id)
 
@@ -21,9 +29,16 @@ def wishMe():
     hour = int(datetime.datetime.now().hour)
     if hour >= 0 and hour < 12:
         speak("Good Morning Sir!")
+        
+    elif hour >= 12 and hour < 15:
+        speak("Good Afternoon Sir!")
+    
+    elif hour >= 15 and hour < 19:
+        speak("Good Evening Sir!")
+
     else:
-        speak("Welcome to Buddy Chatbot!")
-    speak("How May I help you,Methmi ?")
+        speak("Hope you had a good day!")
+    speak("How May I help you?")
 
 
 def takeCommand():
@@ -74,3 +89,22 @@ if __name__ == "__main__":
         elif 'open code' in query:
             codePath = "C:\\Users\\methm\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
             os.startfile(codePath)
+            
+        elif 'open camera' in query:
+            codePath = "C:\\Windows\camera.exe"
+            os.startfile(codePath)
+            
+            
+        elif 'what is your name' in query:
+            speak('I am your chat buddy')
+            
+        elif 'goodbye' in query:
+            speak('good bye and have a good day')
+            exit()
+            
+        else:
+            speak('Did not recognized')
+            
+        
+            
+            
