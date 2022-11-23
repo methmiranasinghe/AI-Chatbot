@@ -6,5 +6,5 @@
 
 #Learning new techonlogies
 
-# NLP 
+# NLP - Natural Language Processing
 
