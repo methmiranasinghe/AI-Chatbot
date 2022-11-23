@@ -6,3 +6,5 @@
 
 #Learning new techonlogies
 
+# NLP 
+
